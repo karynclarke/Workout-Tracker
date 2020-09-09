@@ -13,5 +13,5 @@ router.get("/stats", (req, res) => {
 router.get("/", (req, res) => {
     //returns stats.html to front end //
     res.sendFile(path.join(__dirname, "../public/index.html"));
-})
+});
 module.exports = router;
