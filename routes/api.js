@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const Workout = require("../models/workout.js");
 
-// add api routes
 // gets all workouts
 router.get("/api/workouts", (req, res) => {
 
@@ -14,7 +13,7 @@ router.get("/api/workouts", (req, res) => {
         });
 });
 
-// edits details of existing workout ?
+// edits details of existing workout 
 router.put("/api/workouts/:id", (req, res) => {
     Workout.findByIdAndUpdate(req.params.id, {
             $push: { exercises: req.body }
